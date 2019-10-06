@@ -1,13 +1,15 @@
 import React from "react";
-import { A } from "hookrouter";
 import Layout from "containers/Layout";
+import Hero from "./Hero";
+import SectionTitle from "components/SectionTitle";
 
 const Home = () => {
   document.title = "AllJoin Home";
   return (
     <Layout>
-      <h1>Home</h1>
-      <A href="/about">About</A>
+      <Hero />
+      <SectionTitle>Popular Professional Services</SectionTitle>
+      <SectionTitle>Featured Jobs</SectionTitle>
     </Layout>
   );
 };

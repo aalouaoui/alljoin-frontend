@@ -1,11 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 import Header from "containers/Header";
 
+const Div = styled.div`
+  padding-top: 120px;
+`;
+
 const Layout = ({ children }) => (
-  <div>
+  <Div>
     <Header />
     {children}
-  </div>
+  </Div>
 );
 
 export default Layout;

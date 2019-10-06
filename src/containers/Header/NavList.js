@@ -8,7 +8,6 @@ const styledLabel = styled.span`
   display: block;
   line-height: 50px;
   width: 100%;
-  font-size: 14px;
   cursor: pointer;
   white-space: nowrap;
 `;
@@ -25,7 +24,7 @@ const Div = styled.div`
 
 const NavList = ({ label, cat_id, content }) => {
   const notEmpty = content && content.length > 0;
-  const Comp = cat_id ? A : notEmpty ? "b" : "span",
+  const Comp = cat_id ? A : "span",
     href = cat_id ? `/categories/${cat_id}` : undefined;
 
   const Label = styledLabel.withComponent(Comp);

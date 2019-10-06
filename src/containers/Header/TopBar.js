@@ -34,10 +34,10 @@ const TopBar = () => {
         <SearchForm />
       </div>
       <div>
-        <Button href="/entry" Comp={A} White>
+        <Button href="/entry" Comp={A} white>
           LOGIN
         </Button>
-        <Button href="/entry" Comp={A} Outlined>
+        <Button href="/entry" Comp={A} outlined>
           SIGN UP
         </Button>
       </div>

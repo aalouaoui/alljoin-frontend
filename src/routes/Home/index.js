@@ -1,6 +1,6 @@
 import React from "react";
 import { A } from "hookrouter";
-import Layout from "components/Layout";
+import Layout from "containers/Layout";
 
 const Home = () => {
   document.title = "AllJoin Home";

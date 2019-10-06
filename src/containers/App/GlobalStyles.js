@@ -8,13 +8,17 @@ const GlobalStyles = createGlobalStyle`
   padding: 0;
   vertical-align: middle;
   box-sizing: border-box;
-  transition: all 0.1s ease-in-out 0s, color 0s, font 0s;
+  transition: all 0.2s linear 0s, color 0s, font 0s;
   color: inherit;
   font: inherit;
 }
 
 *:focus {
   outline: 0;
+}
+
+svg {
+  fill: currentColor;
 }
 
 li,

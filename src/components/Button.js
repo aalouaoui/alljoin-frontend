@@ -1,19 +1,23 @@
 import React, { memo } from "react";
 import styled, { css } from "styled-components";
 
-const OutlinedCSS = css`
+const outlinedCSS = css`
   border: solid 2px ${({ theme }) => theme.primaryLight};
   color: ${({ theme }) => theme.primaryLight};
   background: transparent;
 `;
 
-const WhiteCSS = css`
+const whiteCSS = css`
   background: transparent;
   border-color: ${({ theme }) => theme.text};
   color: ${({ theme }) => theme.text};
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled.button.attrs((outlined, white, ...props) => ({
+  ...props,
+  outlined: outlined ? 1 : 0,
+  white: white ? 1 : 0
+}))`
   background: ${({ theme }) => theme.primaryLight};
   height: 50px;
   line-height: 50px;
@@ -26,8 +30,8 @@ const StyledButton = styled.button`
   &:hover {
     opacity: 0.8;
   }
-  ${({ Outlined }) => (Outlined ? OutlinedCSS : "")}
-  ${({ White }) => (White ? WhiteCSS : "")}
+  ${({ outlined }) => (outlined ? outlinedCSS : "")}
+  ${({ white }) => (white ? whiteCSS : "")}
 `;
 
 const Button = ({ Comp, ...props }) => {

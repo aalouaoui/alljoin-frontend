@@ -13,11 +13,7 @@ const whiteCSS = css`
   color: ${({ theme }) => theme.text};
 `;
 
-const StyledButton = styled.button.attrs((outlined, white, ...props) => ({
-  ...props,
-  outlined: outlined ? 1 : 0,
-  white: white ? 1 : 0
-}))`
+const StyledButton = styled.button`
   background: ${({ theme }) => theme.primaryLight};
   height: 50px;
   line-height: 50px;
@@ -30,8 +26,8 @@ const StyledButton = styled.button.attrs((outlined, white, ...props) => ({
   &:hover {
     opacity: 0.8;
   }
-  ${({ outlined }) => (outlined ? outlinedCSS : "")}
-  ${({ white }) => (white ? whiteCSS : "")}
+  ${({ "data-outline": out }) => (out ? outlinedCSS : "")}
+  ${({ "data-white": white }) => (white ? whiteCSS : "")}
 `;
 
 const Button = ({ Comp, ...props }) => {

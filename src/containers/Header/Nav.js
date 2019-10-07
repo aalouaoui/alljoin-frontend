@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import navListItems from "./navListItems";
+import categories from "utils/categories";
 import NavList from "./NavList";
 
 const StyledNav = styled.nav`
@@ -60,8 +60,8 @@ const Nav = () => {
   return (
     <StyledNav>
       <ul className="topLevel">
-        {navListItems.map(item => (
-          <NavList key={item.label} {...item} />
+        {categories.map(item => (
+          <NavList key={item.path} {...item} />
         ))}
       </ul>
     </StyledNav>

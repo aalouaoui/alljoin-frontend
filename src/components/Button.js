@@ -5,12 +5,14 @@ const outlinedCSS = css`
   border: solid 2px ${({ theme }) => theme.primaryLight};
   color: ${({ theme }) => theme.primaryLight};
   background: transparent;
+  box-shadow: none;
 `;
 
 const whiteCSS = css`
   background: transparent;
   border-color: ${({ theme }) => theme.text};
   color: ${({ theme }) => theme.text};
+  box-shadow: none;
 `;
 
 const StyledButton = styled.button`
@@ -22,9 +24,10 @@ const StyledButton = styled.button`
   padding: 0 15px;
   margin: 0 5px;
   border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: 1px 2px 5px ${({ theme }) => theme.bg};
   cursor: pointer;
   &:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   ${({ "data-outline": out }) => (out ? outlinedCSS : "")}
   ${({ "data-white": white }) => (white ? whiteCSS : "")}

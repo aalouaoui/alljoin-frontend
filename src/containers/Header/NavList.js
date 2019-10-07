@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { A } from "hookrouter";
 import { ChevronIcon } from "components/Icons";
 
-const styledLabel = styled.span`
+const Link = styled(A)`
   padding: 0 30px 0 10px;
   display: block;
   line-height: 50px;
@@ -22,23 +22,20 @@ const Div = styled.div`
   }
 `;
 
-const NavList = ({ label, cat_id, content }) => {
+const NavList = ({ label, path, content }) => {
   const notEmpty = content && content.length > 0;
-  const Comp = cat_id ? A : "span",
-    href = cat_id ? `/categories/${cat_id}` : undefined;
-
-  const Label = styledLabel.withComponent(Comp);
+  const href = `/categories/${path}`;
   return (
     <li>
       <Div>
-        <Label href={href}>{label}</Label>
+        <Link href={href}>{label}</Link>
         {notEmpty && <ChevronIcon />}
       </Div>
 
       {notEmpty ? (
         <ul>
           {content.map(item => (
-            <NavList key={item.cat_id} {...item} />
+            <NavList key={item.path} {...item} />
           ))}
         </ul>
       ) : null}

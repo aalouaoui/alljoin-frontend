@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import categories from "utils/categories";
 import NavList from "./NavList";
@@ -68,4 +68,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default memo(Nav);

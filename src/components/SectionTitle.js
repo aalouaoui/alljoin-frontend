@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styled from "styled-components";
 
 const SectionTitle = styled.h1`
@@ -5,4 +6,4 @@ const SectionTitle = styled.h1`
   font-weight: 300;
 `;
 
-export default SectionTitle;
+export default memo(SectionTitle);

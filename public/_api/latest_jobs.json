@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Meetings Manager",
+    "img": "http://source.unsplash.com/random/800x600?meeting",
+    "id": "vnjwmci38p",
+    "location": "San Francisco",
+    "duration": 20,
+    "price": 3500
+  },
+  {
+    "title": "Weeding Photographer",
+    "img": "http://source.unsplash.com/random/800x600?weeding",
+    "id": "00xi3jcft4",
+    "location": "Dubai",
+    "duration": 2,
+    "price": 375
+  },
+  {
+    "title": "Driver",
+    "img": "http://source.unsplash.com/random/800x600?driver",
+    "id": "gvgsptb7ar",
+    "location": "London",
+    "duration": 1,
+    "price": 200
+  },
+  {
+    "title": "Invitation Cards Designer",
+    "img": "http://source.unsplash.com/random/800x600?invitation+card",
+    "id": "pv7zka4e2u",
+    "location": "Madrid",
+    "duration": 10,
+    "price": 699
+  },
+  {
+    "title": "DJ",
+    "img": "http://source.unsplash.com/random/800x600?dj",
+    "id": "izqyjy2vu1",
+    "location": "Lisbon",
+    "duration": 1,
+    "price": 500
+  }
+]

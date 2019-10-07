@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import { A } from "hookrouter";
 import heroBg from "assets/img/home_hero.jpg";
@@ -35,4 +35,4 @@ const Hero = () => (
   </Div>
 );
 
-export default Hero;
+export default memo(Hero);

@@ -30,6 +30,11 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  i {
+    font-style: normal;
+    color: ${({ theme }) => theme.grey};
+  }
+
   body {
     /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; */

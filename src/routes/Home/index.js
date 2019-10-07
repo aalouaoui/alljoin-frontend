@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "containers/Layout";
 import Hero from "./Hero";
 import SectionTitle from "components/SectionTitle";
+import FeaturedJobs from "./FeaturedJobs";
 
 const Home = () => {
   document.title = "AllJoin Home";
@@ -9,7 +10,7 @@ const Home = () => {
     <Layout>
       <Hero />
       <SectionTitle>Popular Professional Services</SectionTitle>
-      <SectionTitle>Featured Jobs</SectionTitle>
+      <FeaturedJobs />
     </Layout>
   );
 };

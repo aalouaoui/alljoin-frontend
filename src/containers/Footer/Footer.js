@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { A } from "hookrouter";
 import styled from "styled-components";
 import categories from "utils/categories";
@@ -54,4 +54,4 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+export default memo(Footer);

@@ -9,6 +9,7 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   height: 120px;
+  z-index: 100;
   background: ${({ theme }) => theme.bg};
   box-shadow: 0 2px 3px ${({ theme }) => theme.darkBg};
 `;

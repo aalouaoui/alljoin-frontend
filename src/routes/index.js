@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useRoutes } from "hookrouter";
 import Home from "./Home";
+import Entry from "./Entry";
 
 const routes = {
   "/": Home,
-  "/about": () => "about",
+  "/entry": Entry,
   "/products": () => "products",
   "/products/:id": ({ id }) => `Product ${id}`
 };

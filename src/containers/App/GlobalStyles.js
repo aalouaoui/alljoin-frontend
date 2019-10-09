@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap");
@@ -55,20 +55,30 @@ const GlobalStyles = createGlobalStyle`
 
   body::-webkit-scrollbar-track,
   .customScrollbars::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.black2};
+    background: ${({ theme }) => theme.black1};
     border-radius: 15px;
   }
 
   body::-webkit-scrollbar,
   .customScrollbars::-webkit-scrollbar {
-    width: 10px;
-    background-color: rgba(0,0,0,0);
+    width: 6px;
+    background: transparent;
   }
 
   body::-webkit-scrollbar-thumb,
   .customScrollbars::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: ${({ theme }) => theme.primary0};
+    background-color: ${({ theme }) => theme.accent};
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
   }
 `;
 

@@ -21,9 +21,11 @@ const Div = styled.div`
     white-space: nowrap;
     text-overflow: ellipsis;
     border-bottom: dashed 1px rgba(255, 255, 255, 0);
+    text-decoration-color: ${({ theme }) => theme.accent};
   }
   a:hover {
-    border-bottom: dashed 1px #fff;
+    text-decoration: underline wavy ${({ theme }) => theme.accent};
+    text-decoration-skip-ink: none;
   }
 `;
 

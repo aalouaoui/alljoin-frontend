@@ -7,33 +7,33 @@ import FooterList from "./FooterList";
 
 const TopFooter = styled.div`
   display: flex;
-  background: ${({ theme }) => theme.bg};
-  padding: ${({ theme }) => theme.spacing};
+  background: ${({ theme }) => theme.black1};
+  padding: 30px;
   border-radius: ${({ theme: { borderRadius: r } }) => `${r} ${r} 0 0`};
   justify-content: stretch;
   align-items: flex-start;
   > div {
     flex: 1;
-    padding: 0 ${({ theme }) => theme.spacing};
+    padding: 0 30px;
   }
   h3 {
-    margin-bottom: ${({ theme }) => theme.spacing};
+    margin-bottom: 30px;
   }
 
   a:hover {
-    color: ${({ theme }) => theme.primaryLight};
+    color: ${({ theme }) => theme.primary0};
   }
 `;
 
 const BottomFooter = styled.div`
-  background: ${({ theme }) => theme.darkBg};
-  padding: 0 ${({ theme }) => theme.spacing};
+  background: ${({ theme }) => theme.black2};
+  padding: 0 30px;
   line-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   a:hover {
-    color: ${({ theme }) => theme.primaryLight};
+    color: ${({ theme }) => theme.primary0};
   }
 `;
 

@@ -10,8 +10,8 @@ const StyledHeader = styled.header`
   right: 0;
   height: 120px;
   z-index: 100;
-  background: ${({ theme }) => theme.bg};
-  box-shadow: 0 2px 3px ${({ theme }) => theme.darkBg};
+  background: ${({ theme }) => theme.black1};
+  box-shadow: 0 2px 3px ${({ theme }) => theme.black2};
 `;
 
 const Header = () => {

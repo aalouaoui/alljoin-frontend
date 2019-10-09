@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "hookrouter";
 import styled from "styled-components";
 import SectionTitle from "components/SectionTitle";
 import Input from "components/Input";
@@ -8,7 +9,7 @@ import SocialAuth from "./SocialAuth";
 
 const Div = styled.div`
   flex: 1;
-  background: ${({ theme }) => theme.primaryLight};
+  background: ${({ theme }) => theme.primary0};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,22 +20,25 @@ const Div = styled.div`
     align-items: center;
     flex-wrap: wrap;
     width: 250px;
-    margin-bottom: ${({ theme }) => theme.spacing};
+    margin-bottom: 30px;
   }
   input {
-    margin-bottom: ${({ theme }) => theme.spacing};
+    margin-bottom: 30px;
   }
   button {
     background: ${({ theme }) => theme.accent};
-    padding: 0 ${({ theme }) => theme.spacing};
+    padding: 0 30px;
   }
   button:hover {
-    background: ${({ theme }) => theme.darkBg};
+    background: ${({ theme }) => theme.black2};
   }
 `;
 
 const LoginForm = () => {
-  const handleSubmit = ev => ev.preventDefault();
+  const handleSubmit = ev => {
+    ev.preventDefault();
+    navigate("/");
+  };
   const userNameInput = useInput("username");
   const passwordInput = useInput("password");
   return (
@@ -43,9 +47,7 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <Input {...userNameInput} placeholder="Email or Username" required />
         <Input {...passwordInput} required />
-        <Button Comp="button" type="submit">
-          Login
-        </Button>
+        <Button>Login</Button>
       </form>
       <p>Or Login with:</p>
       <SocialAuth />

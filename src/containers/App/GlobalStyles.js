@@ -42,21 +42,21 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    background: ${({ theme }) => theme.bodyBg};
-    color: ${({ theme }) => theme.text};
+    background: ${({ theme }) => theme.black0};
+    color: ${({ theme }) => theme.white0};
     max-width: 100%;
     overflow-x: hidden;
   }
 
   ::selection {
-    color: ${({ theme }) => theme.text};
-    background: ${({ theme }) => theme.primaryLight};
+    color: ${({ theme }) => theme.white0};
+    background: ${({ theme }) => theme.primary0};
   }
 
   body::-webkit-scrollbar-track,
   .customScrollbars::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.darkBg};
-    border-radius: ${({ theme }) => theme.borderRadius};
+    background: ${({ theme }) => theme.black2};
+    border-radius: 15px;
   }
 
   body::-webkit-scrollbar,
@@ -68,7 +68,7 @@ const GlobalStyles = createGlobalStyle`
   body::-webkit-scrollbar-thumb,
   .customScrollbars::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: ${({ theme }) => theme.gradient};
+    background: ${({ theme }) => theme.primary0};
   }
 `;
 

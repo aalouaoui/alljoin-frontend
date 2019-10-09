@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { A } from "hookrouter";
 import Button from "components/Button";
 
 const Div = styled.div`
-  margin: ${({ theme }) => theme.spacing};
-  padding: ${({ theme }) => theme.spacing};
+  margin: 30px;
+  padding: 30px;
   background: ${({ theme }) => theme.gradient};
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +15,7 @@ const Div = styled.div`
 const RegisterReminder = () => (
   <Div>
     <h2>Ready to Join us?</h2>
-    <Button data-white data-outline Comp={A} href="/entry">
+    <Button apply="outline, white" href="/entry">
       SIGN UP NOW
     </Button>
   </Div>

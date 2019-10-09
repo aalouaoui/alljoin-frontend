@@ -11,13 +11,13 @@ const Input = styled.input`
   width: 250px;
   padding: 0 20px;
   line-height: 50px;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  border: solid 2px ${({ theme }) => theme.text};
-  color: ${({ theme }) => theme.text};
+  border-radius: 15px;
+  border: solid 2px ${({ theme }) => theme.white0};
+  color: ${({ theme }) => theme.white0};
   background: transparent;
   margin: 0 5px;
   ::placeholder {
-    color: ${({ theme }) => theme.dimText};
+    color: ${({ theme }) => theme.white1};
   }
   ${({ forHeader }) => (forHeader ? altCSS : "")}
 `;

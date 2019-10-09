@@ -1,7 +1,7 @@
 [
   {
     "title": "Meetings Manager",
-    "img": "http://source.unsplash.com/random/800x600?meeting",
+    "img": "/img/meeting.jfif",
     "id": "vnjwmci38p",
     "location": "San Francisco",
     "duration": 20,
@@ -9,7 +9,7 @@
   },
   {
     "title": "Weeding Photographer",
-    "img": "http://source.unsplash.com/random/800x600?weeding",
+    "img": "/img/weeding_photo.jfif",
     "id": "00xi3jcft4",
     "location": "Dubai",
     "duration": 2,
@@ -17,7 +17,7 @@
   },
   {
     "title": "Driver",
-    "img": "http://source.unsplash.com/random/800x600?driver",
+    "img": "/img/driver.jfif",
     "id": "gvgsptb7ar",
     "location": "London",
     "duration": 1,
@@ -25,7 +25,7 @@
   },
   {
     "title": "Invitation Cards Designer",
-    "img": "http://source.unsplash.com/random/800x600?invitation+card",
+    "img": "/img/wedding_invitation.jfif",
     "id": "pv7zka4e2u",
     "location": "Madrid",
     "duration": 10,
@@ -33,7 +33,7 @@
   },
   {
     "title": "DJ",
-    "img": "http://source.unsplash.com/random/800x600?dj",
+    "img": "/img/dj.jfif",
     "id": "izqyjy2vu1",
     "location": "Lisbon",
     "duration": 1,

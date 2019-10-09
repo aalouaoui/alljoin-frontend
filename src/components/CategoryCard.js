@@ -7,10 +7,10 @@ const Div = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${({ img }) => img});
   background-position: center;
   background-size: cover;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  padding: calc(${({ theme }) => theme.spacing} / 2);
-  margin-right: ${({ theme }) => theme.spacing};
-  box-shadow: 0 2px 10px ${({ theme }) => theme.darkBg};
+  border-radius: 15px;
+  padding: 15px;
+  margin-right: 30px;
+  box-shadow: 0 2px 10px ${({ theme }) => theme.black2};
   min-width: 250px;
   height: 250px;
   display: flex;

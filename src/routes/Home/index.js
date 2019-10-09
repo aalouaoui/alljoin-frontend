@@ -6,7 +6,7 @@ import RegisterReminder from "./RegisterReminder";
 import PopularServices from "./PopularServices";
 
 const Home = () => {
-  document.title = "AllJoin Home";
+  document.title = "AllJoin | Freelance and Management Services for Events";
   return (
     <Layout>
       <Hero />

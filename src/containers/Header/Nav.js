@@ -21,14 +21,14 @@ const StyledNav = styled.nav`
     top: 50px;
     left: 0;
     min-width: 100%;
-    background: ${({ theme }) => theme.primaryLight};
+    background: ${({ theme }) => theme.primary0};
   }
 
   ul:not(.topLevel) > li > ul {
     top: 0;
     left: calc(100% + 1px);
     min-width: 100%;
-    background: ${({ theme }) => theme.primaryLight};
+    background: ${({ theme }) => theme.primary0};
   }
 
   ul:not(.topLevel) {
@@ -40,7 +40,7 @@ const StyledNav = styled.nav`
   }
 
   li:hover {
-    background: ${({ theme }) => theme.primaryDark};
+    background: ${({ theme }) => theme.primary1};
   }
 
   ul.topLevel > li > div > svg {

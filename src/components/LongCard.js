@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { A } from "hookrouter";
 import Button from "./Button";
 import { LocationIcon } from "./Icons";
 
 const Div = styled.div`
-  background: ${({ theme }) => theme.darkBg};
-  margin: 0 ${({ theme }) => theme.spacing};
+  background: ${({ theme }) => theme.black2};
+  margin: 0 30px;
   margin-bottom: 10px;
-  padding: ${({ theme }) => theme.spacing};
-  border-radius: ${({ theme }) => theme.borderRadius};
+  padding: 30px;
+  border-radius: 15px;
   &,
   div {
     display: flex;
@@ -28,7 +27,7 @@ const Div = styled.div`
   .alt {
     text-align: right;
     h4 {
-      color: ${({ theme }) => theme.primaryLight};
+      color: ${({ theme }) => theme.primary0};
     }
   }
 `;
@@ -51,9 +50,7 @@ const LongCard = ({ title, img, id, location, duration, price }) => (
         <p>{duration} Days</p>
         <h4>{price}$</h4>
       </span>
-      <Button Comp={A} href={`/jobs/${id}`}>
-        Apply
-      </Button>
+      <Button href={`/jobs/${id}`}>Apply</Button>
     </div>
   </Div>
 );

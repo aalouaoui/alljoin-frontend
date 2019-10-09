@@ -1,16 +1,15 @@
 const defaultTheme = {
-  bodyBg: "#23232d",
-  bg: "#191922",
-  darkBg: "#121212",
-  primaryDark: "#00897b",
-  primaryLight: "#009688",
-  gradient: "linear-gradient(45deg, #009688, #009688)",
+  primary0: "#009688",
+  primary1: "#007D70",
   accent: "#fe7c00",
+  black0: "#23232d",
+  black1: "#191922",
+  black2: "#121212",
   grey: "#757575",
-  text: "#fff",
-  dimText: "#ededed",
-  borderRadius: "15px",
-  spacing: "30px"
+  white0: "#fff",
+  white1: "#ededed"
 };
+
+defaultTheme.gradient = `linear-gradient(45deg, ${defaultTheme.primary0}, ${defaultTheme.primary1})`;
 
 export default defaultTheme;

@@ -7,7 +7,7 @@ import Button from "components/Button";
 
 const Div = styled.div`
   height: 70px;
-  padding: 10px ${({ theme }) => theme.spacing};
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@ const Div = styled.div`
   }
 
   .logo {
-    margin-right: ${({ theme }) => theme.spacing};
+    margin-right: 30px;
     img {
       height: 50px;
     }
@@ -34,10 +34,10 @@ const TopBar = () => {
         <SearchForm />
       </div>
       <div>
-        <Button href="/entry" Comp={A} data-white>
+        <Button href="/entry" apply="white">
           LOGIN
         </Button>
-        <Button href="/entry" Comp={A} data-outline>
+        <Button href="/entry" apply="outline">
           SIGN UP
         </Button>
       </div>

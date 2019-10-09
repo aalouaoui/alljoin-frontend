@@ -19,7 +19,7 @@ const Div = styled.div`
     flex: 1;
   }
   .logo {
-    margin: calc(${({ theme }) => theme.spacing} / 2) ${({ theme }) => theme.spacing};
+    margin: 10px 0 15px 30px;
     display: inline-block;
     img {
       height: 50px;
@@ -28,6 +28,7 @@ const Div = styled.div`
 `;
 
 const Entry = () => {
+  document.title = "AllJoin | Login or Register";
   return (
     <Div>
       <A href="/" className="logo">

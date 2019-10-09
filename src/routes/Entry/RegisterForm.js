@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "hookrouter";
 import styled from "styled-components";
 import SectionTitle from "components/SectionTitle";
 import useInput from "hooks/useInput";
@@ -8,7 +9,7 @@ import SocialAuth from "./SocialAuth";
 
 const Div = styled.div`
   flex: 2;
-  background: ${({ theme }) => theme.bg};
+  background: ${({ theme }) => theme.black1};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,24 +20,27 @@ const Div = styled.div`
     align-items: center;
     flex-wrap: wrap;
     width: 540px;
-    margin-bottom: ${({ theme }) => theme.spacing};
+    margin-bottom: 30px;
   }
   input {
-    margin-bottom: ${({ theme }) => theme.spacing};
+    margin-bottom: 30px;
   }
   button {
     width: 250px;
     background: ${({ theme }) => theme.accent};
     display: block;
-    padding: 0 ${({ theme }) => theme.spacing};
+    padding: 0 30px;
   }
   button:hover {
-    background: ${({ theme }) => theme.primaryDark};
+    background: ${({ theme }) => theme.primary1};
   }
 `;
 
 const RegisterForm = () => {
-  const handleSubmit = ev => ev.preventDefault();
+  const handleSubmit = ev => {
+    ev.preventDefault();
+    navigate("/");
+  };
   const emailInput = useInput("email");
   const userNameInput = useInput("username");
   const passwordInput = useInput("password");
@@ -49,8 +53,8 @@ const RegisterForm = () => {
         <Input {...userNameInput} required />
         <Input {...passwordInput} required />
         <Input {...passwordConfirmInput} required />
-        <Button type="submit">Register as Client</Button>
-        <Button type="submit">Register as Service Provider</Button>
+        <Button>Register as Client</Button>
+        <Button>Register as Service Provider</Button>
       </form>
       <p>Or Register with:</p>
       <SocialAuth />

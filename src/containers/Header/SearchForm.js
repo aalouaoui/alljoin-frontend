@@ -17,7 +17,7 @@ const SearchForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <Input forHeader {...searchInput} placeholder="Search for an Event..." required />
-      <Button type="submit">Search</Button>
+      <Button>Search</Button>
     </Form>
   );
 };

@@ -7,7 +7,7 @@ import { ChevronIcon } from "components/Icons";
 import useCarousel from "hooks/useCarousel";
 
 const Div = styled.div`
-  margin: 0 ${({ theme }) => theme.spacing};
+  margin: 0 30px;
   height: 250px;
   overflow-y: hidden;
   position: relative;
@@ -23,11 +23,11 @@ const Div = styled.div`
     top: 0;
     bottom: 0;
     width: 100px;
-    padding-left: ${({ theme }) => theme.spacing};
+    padding-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-90deg, ${({ theme }) => theme.bg}, rgba(0, 0, 0, 0));
+    background: linear-gradient(-90deg, ${({ theme }) => theme.black1}, rgba(0, 0, 0, 0));
     cursor: pointer;
   }
 

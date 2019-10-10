@@ -49,8 +49,11 @@ const Div = styled.div`
 
 const Entry = () => {
   document.title = "AllJoin | Login or Register";
+  const scrollToLogin = () => {
+    if (window.location.pathname === "/login") document.getElementById("login").scrollIntoView();
+  };
   return (
-    <Div>
+    <Div onLoad={scrollToLogin}>
       <div className="logo">
         <A href="/">
           <img src={logoImg} alt="AllJoin" />

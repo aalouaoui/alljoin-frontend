@@ -15,7 +15,7 @@ const Div = styled.div`
 const RegisterReminder = () => (
   <Div>
     <h2>Ready to Join us?</h2>
-    <Button apply="outline, white" href="/entry#register">
+    <Button apply="outline, white" href="/entry">
       SIGN UP NOW
     </Button>
   </Div>

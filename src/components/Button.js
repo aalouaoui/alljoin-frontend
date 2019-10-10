@@ -26,6 +26,7 @@ const applyToCSS = applyString =>
         .map(c => customStyles[c]);
 
 const StyledButton = styled.button`
+  white-space: nowrap;
   background: ${({ theme }) => theme.primary0};
   height: 50px;
   line-height: 50px;

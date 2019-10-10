@@ -62,11 +62,12 @@ const RegisterForm = () => {
   const userNameInput = useInput("username");
   const passwordInput = useInput("password");
   const passwordConfirmInput = useInput("password_confirm");
+  const isRegister = window.location.pathname === "/register";
   return (
-    <Div id="register">
+    <Div>
       <SectionTitle>Create Your Account Now</SectionTitle>
       <form onSubmit={handleSubmit}>
-        <Input {...emailInput} required />
+        <Input {...emailInput} required autoFocus={isRegister} />
         <Input {...userNameInput} required />
         <Input {...passwordInput} required />
         <Input {...passwordConfirmInput} required />

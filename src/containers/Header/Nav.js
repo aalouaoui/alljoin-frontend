@@ -4,11 +4,12 @@ import categories from "utils/categories";
 import NavList from "./NavList";
 
 const StyledNav = styled.nav`
+  height: 50px;
   li {
     position: relative;
   }
 
-  ul {
+  ul:not(.topLevel) {
     position: absolute;
   }
 

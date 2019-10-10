@@ -55,11 +55,12 @@ const LoginForm = () => {
   };
   const userNameInput = useInput("username");
   const passwordInput = useInput("password");
+  const isLogin = window.location.pathname === "/login";
   return (
-    <Div id="login">
+    <Div>
       <SectionTitle>Already A User</SectionTitle>
       <form onSubmit={handleSubmit}>
-        <Input {...userNameInput} placeholder="Email or Username" required />
+        <Input {...userNameInput} placeholder="Email or Username" required autoFocus={isLogin} />
         <Input {...passwordInput} required />
         <Button>Login</Button>
       </form>

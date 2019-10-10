@@ -15,6 +15,7 @@ const Div = styled.div`
     display: flex;
     align-items: stretch;
     justify-content: center;
+    flex-direction: row-reverse;
     width: 100%;
     flex: 1;
   }
@@ -29,7 +30,7 @@ const Div = styled.div`
     min-height: 100vh;
     padding-top: 60px;
     .wrapper {
-      flex-direction: column-reverse;
+      flex-direction: ${({ isLogin }) => (isLogin ? "column-reverse" : "column")};
     }
     .logo {
       background: ${({ theme }) => theme.black0};
@@ -41,27 +42,30 @@ const Div = styled.div`
       z-index: 10;
       text-align: center;
       img {
-        height: 40px;
+        height: 50px;
       }
+    }
+  }
+  @media (max-width: 640px) {
+    .logo img {
+      height: 40px;
     }
   }
 `;
 
 const Entry = () => {
   document.title = "AllJoin | Login or Register";
-  const scrollToLogin = () => {
-    if (window.location.pathname === "/login") document.getElementById("login").scrollIntoView();
-  };
+  const isLogin = window.location.pathname === "/login";
   return (
-    <Div onLoad={scrollToLogin}>
+    <Div isLogin={isLogin}>
       <div className="logo">
         <A href="/">
           <img src={logoImg} alt="AllJoin" />
         </A>
       </div>
       <div className="wrapper">
-        <LoginForm />
         <RegisterForm />
+        <LoginForm />
       </div>
     </Div>
   );

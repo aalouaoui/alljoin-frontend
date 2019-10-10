@@ -5,7 +5,7 @@ import Entry from "./Entry";
 
 const routes = {
   "/": () => <Home />,
-  "/entry": () => <Entry />,
+  "/register": () => <Entry />,
   "/login": () => <Entry />,
   "/products": () => "products",
   "/products/:id": ({ id }) => `Product ${id}`

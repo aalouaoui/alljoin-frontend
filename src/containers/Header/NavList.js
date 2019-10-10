@@ -10,6 +10,9 @@ const Link = styled(A)`
   width: 100%;
   cursor: pointer;
   white-space: nowrap;
+  @media (max-width: 1200px) {
+    padding: 0 20px 0 5px;
+  }
 `;
 
 const Div = styled.div`
@@ -20,15 +23,21 @@ const Div = styled.div`
     top: 20px;
     height: 10px;
   }
+  @media (max-width: 1200px) {
+    svg {
+      right: 5px;
+    }
+  }
 `;
 
 const NavList = ({ label, path, content }) => {
   const notEmpty = content && content.length > 0;
   const href = `/categories/${path}`;
+  const Anchor = notEmpty ? Link.withComponent("span") : Link;
   return (
     <li>
       <Div>
-        <Link href={href}>{label}</Link>
+        <Anchor href={href}>{label}</Anchor>
         {notEmpty && <ChevronIcon />}
       </Div>
 

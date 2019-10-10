@@ -37,7 +37,7 @@ const TopBar = () => {
         <Button href="/login" apply="white">
           LOGIN
         </Button>
-        <Button href="/entry" apply="outline">
+        <Button href="/register" apply="outline">
           SIGN UP
         </Button>
       </div>

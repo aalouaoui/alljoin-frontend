@@ -1,6 +1,6 @@
 export const howToList = [
   { label: "Explore Products", href: "/products" },
-  { label: "Create Account", href: "/entry" },
+  { label: "Create Account", href: "/register" },
   { label: "Sign In", href: "/login" },
   { label: "Payments", href: "/payments" },
   { label: "FAQ", href: "/faq" }

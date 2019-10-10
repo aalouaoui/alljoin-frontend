@@ -1,7 +1,7 @@
 export const howToList = [
   { label: "Explore Products", href: "/products" },
-  { label: "Create Account", href: "/entry" },
-  { label: "Sign In", href: "/entry" },
+  { label: "Create Account", href: "/entry#register" },
+  { label: "Sign In", href: "/entry#login" },
   { label: "Payments", href: "/payments" },
   { label: "FAQ", href: "/faq" }
 ];

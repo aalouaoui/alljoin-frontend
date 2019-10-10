@@ -20,6 +20,17 @@ const Div = styled.div`
   span:hover {
     background: ${({ theme }) => theme.black2};
   }
+  @media (max-width: 640px) {
+    margin-top: 15px;
+    width: 95px;
+    span {
+      width: 40px;
+      line-height: 40px;
+      height: 40px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+  }
 `;
 
 const SocialAuth = () => {

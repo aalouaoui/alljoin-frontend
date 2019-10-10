@@ -11,7 +11,7 @@ const Div = styled.div`
   justify-content: stretch;
   align-items: flex-start;
   height: 100vh;
-  > div {
+  .wrapper {
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -19,10 +19,30 @@ const Div = styled.div`
     flex: 1;
   }
   .logo {
-    margin: 10px 0 15px 30px;
-    display: inline-block;
+    padding: 10px 0 15px 30px;
     img {
       height: 50px;
+    }
+  }
+  @media (max-width: 910px) {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 60px;
+    .wrapper {
+      flex-direction: column-reverse;
+    }
+    .logo {
+      background: ${({ theme }) => theme.black0};
+      padding: 10px 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      text-align: center;
+      img {
+        height: 40px;
+      }
     }
   }
 `;
@@ -31,10 +51,12 @@ const Entry = () => {
   document.title = "AllJoin | Login or Register";
   return (
     <Div>
-      <A href="/" className="logo">
-        <img src={logoImg} alt="AllJoin" />
-      </A>
-      <div>
+      <div className="logo">
+        <A href="/">
+          <img src={logoImg} alt="AllJoin" />
+        </A>
+      </div>
+      <div className="wrapper">
         <LoginForm />
         <RegisterForm />
       </div>

@@ -14,6 +14,7 @@ const Div = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
   form {
     display: flex;
     justify-content: center;
@@ -32,6 +33,19 @@ const Div = styled.div`
   button:hover {
     background: ${({ theme }) => theme.black2};
   }
+  @media (max-width: 640px) {
+    padding: 15px;
+    form {
+      margin-bottom: 15px;
+    }
+    input {
+      margin-bottom: 15px;
+    }
+    button {
+      background: ${({ theme }) => theme.accent};
+      padding: 0 20px;
+    }
+  }
 `;
 
 const LoginForm = () => {
@@ -42,7 +56,7 @@ const LoginForm = () => {
   const userNameInput = useInput("username");
   const passwordInput = useInput("password");
   return (
-    <Div>
+    <Div id="login">
       <SectionTitle>Already A User</SectionTitle>
       <form onSubmit={handleSubmit}>
         <Input {...userNameInput} placeholder="Email or Username" required />

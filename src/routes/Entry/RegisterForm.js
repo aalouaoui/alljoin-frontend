@@ -14,6 +14,7 @@ const Div = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
   form {
     display: flex;
     justify-content: space-between;
@@ -34,6 +35,22 @@ const Div = styled.div`
   button:hover {
     background: ${({ theme }) => theme.primary1};
   }
+  @media (max-width: 640px) {
+    padding: 15px;
+    form {
+      margin-bottom: 15px;
+      width: 250px;
+    }
+    input {
+      margin-bottom: 15px;
+    }
+    button {
+      width: 95%;
+      background: ${({ theme }) => theme.accent};
+      padding: 0 20px;
+      margin-bottom: 15px;
+    }
+  }
 `;
 
 const RegisterForm = () => {
@@ -46,7 +63,7 @@ const RegisterForm = () => {
   const passwordInput = useInput("password");
   const passwordConfirmInput = useInput("password_confirm");
   return (
-    <Div>
+    <Div id="register">
       <SectionTitle>Create Your Account Now</SectionTitle>
       <form onSubmit={handleSubmit}>
         <Input {...emailInput} required />

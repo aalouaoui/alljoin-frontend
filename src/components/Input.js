@@ -20,6 +20,14 @@ const Input = styled.input`
     color: ${({ theme }) => theme.white1};
   }
   ${({ forHeader }) => (forHeader ? altCSS : "")}
+  @media(max-width: 640px) {
+    padding: 0 15px;
+    height: 40px;
+    width: 95%;
+    line-height: 40px;
+    border-width: 1px;
+    border-radius: 10px;
+  }
 `;
 
 export default memo(Input);

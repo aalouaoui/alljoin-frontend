@@ -40,6 +40,12 @@ const StyledButton = styled.button`
     opacity: 0.9;
   }
   ${({ apply }) => applyToCSS(apply)}
+  @media(max-width: 640px) {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
 `;
 
 const Button = ({ Comp, ...props }) => {

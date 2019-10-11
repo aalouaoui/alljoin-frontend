@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
 `;
 
 const HeaderMobile = () => {
-  const [isOpen, toggle] = useToggle(true);
+  const [isOpen, toggle] = useToggle();
   return (
     <StyledHeader>
       <NavMobile toggle={toggle} />

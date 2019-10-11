@@ -12,6 +12,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  svg {
+    margin: 0 5px;
+    height: 30px;
+  }
   .centner {
     width: 50px;
     flex: 1 1;
@@ -26,6 +30,9 @@ const Nav = styled.nav`
     .logo img {
       height: 40px;
     }
+    svg {
+      height: 24px;
+    }
   }
   @media (max-width: 375px) {
     .centner:first-child {
@@ -37,11 +44,11 @@ const Nav = styled.nav`
   }
 `;
 
-const NavMobile = () => {
+const NavMobile = ({ toggle }) => {
   return (
     <Nav>
       <div className="centner">
-        <MenuIcon height="30px" />
+        <MenuIcon onClick={toggle} />
       </div>
       <A href="/" className="logo">
         <img src={logoImg} alt="AllJoin" />

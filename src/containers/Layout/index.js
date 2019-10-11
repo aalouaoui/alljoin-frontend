@@ -6,7 +6,7 @@ import HeaderMobile from "containers/HeaderMobile";
 
 const Div = styled.div`
   padding-top: 120px;
-  @media (max-width: 910px) {
+  @media (max-width: 970px) {
     padding-top: 70px;
   }
   @media (max-width: 640px) {

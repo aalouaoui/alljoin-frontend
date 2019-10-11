@@ -8,10 +8,10 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   background: ${({ theme }) => theme.black1};
   box-shadow: 0 2px 3px ${({ theme }) => theme.black2};
-  @media (max-width: 910px) {
+  @media (max-width: 970px) {
     display: none;
   }
 `;

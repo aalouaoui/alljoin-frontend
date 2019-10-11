@@ -12,16 +12,13 @@ const TopFooter = styled.div`
   border-radius: ${({ theme: { borderRadius: r } }) => `${r} ${r} 0 0`};
   justify-content: stretch;
   align-items: flex-start;
-  > div {
-    flex: 1;
-    padding: 0 30px;
-  }
-  h3 {
-    margin-bottom: 30px;
-  }
-
   a:hover {
     color: ${({ theme }) => theme.primary0};
+  }
+  @media (max-width: 640px) {
+    padding: 15px;
+    flex-direction: column;
+    align-items: stretch;
   }
 `;
 
@@ -34,6 +31,12 @@ const BottomFooter = styled.div`
   align-items: flex-start;
   a:hover {
     color: ${({ theme }) => theme.primary0};
+  }
+  @media (max-width: 640px) {
+    padding: 0 5px;
+    line-height: 40px;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 

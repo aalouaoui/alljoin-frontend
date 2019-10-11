@@ -20,6 +20,9 @@ const Div = styled.div`
   a {
     margin-top: 15px;
   }
+  @media (max-width: 640px) {
+    padding: 0 10px;
+  }
 `;
 
 const Hero = () => (

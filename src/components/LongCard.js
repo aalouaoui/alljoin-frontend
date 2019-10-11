@@ -30,6 +30,37 @@ const Div = styled.div`
       color: ${({ theme }) => theme.primary0};
     }
   }
+
+  @media (max-width: 640px) {
+    margin: 0 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    & {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      text-align: center;
+    }
+    div {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .alt {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    a {
+      margin: 5px 0;
+    }
+    img {
+      margin: 5px auto;
+    }
+    * {
+      line-height: 1.5;
+    }
+  }
 `;
 
 const LongCard = ({ title, img, id, location, duration, price }) => (

@@ -16,7 +16,7 @@ const Div = styled.div`
     justify-content: stretch;
     align-items: center;
     overflow-x: auto;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
   }
   .btn {
     position: absolute;
@@ -32,12 +32,23 @@ const Div = styled.div`
   }
 
   .prev {
-    left: 0;
+    left: 0px;
     transform: rotate(180deg);
   }
 
   .next {
-    right: 0;
+    right: 0px;
+  }
+
+  @media (max-width: 970px) {
+    height: 200px;
+    .btn {
+      width: 50px;
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: 640px) {
+    margin: 0 5px;
   }
 `;
 

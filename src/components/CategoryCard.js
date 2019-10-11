@@ -27,6 +27,10 @@ const Div = styled.div`
     text-decoration: underline wavy ${({ theme }) => theme.accent};
     text-decoration-skip-ink: none;
   }
+  @media (max-width: 970px) {
+    min-width: 200px;
+    height: 200px;
+  }
 `;
 
 const CategoryCard = ({ label, img, path, content }) => (

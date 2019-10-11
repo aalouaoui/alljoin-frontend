@@ -10,6 +10,10 @@ const Div = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 640px) {
+    margin: 30px 5px;
+    padding: 15px;
+  }
 `;
 
 const RegisterReminder = () => (

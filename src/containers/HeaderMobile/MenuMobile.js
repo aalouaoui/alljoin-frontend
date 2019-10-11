@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import Button from "components/Button";
 import MenuListItem from "./MenuListItem";
 import categories from "utils/categories";
+import SearchFormMobile from "./SearchFormMobile";
 
 const Div = styled.div`
   display: none;
@@ -27,13 +28,18 @@ const Div = styled.div`
   .menuWrapper {
     z-index: 101;
     background: ${({ theme }) => theme.black0};
-    max-width: 250px;
+    max-width: 300px;
     width: 90%;
     padding: 15px 10px;
     overflow-y: auto;
     > ul {
       width: 100%;
       padding: 15px 5px;
+    }
+  }
+  @media (max-width: 375px) {
+    .menuWrapper {
+      max-width: 270px;
     }
   }
 `;
@@ -51,6 +57,7 @@ const MenuMobile = ({ isOpen, toggle }) => {
       <div className="hider" onClick={toggle} />
       <div className="menuWrapper">
         <Button href="/register">SIGN UP</Button>
+        <SearchFormMobile />
         <ul>
           <MenuListItem label="Sign In" href="/login" />
           {categories.map(item => (
